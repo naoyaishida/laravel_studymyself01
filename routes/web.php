@@ -86,13 +86,21 @@ Route::view('/','home');
 Route::view('contact','contact');
 Route::view('about','about');
 
-Route::post('customers1',[
+// asは引き受け元、usersはその先
+
+Route::get('customers1',[
     'uses' => 'CustomerContoroller@store',
-    'as' => 'cusutomers1'
+    'as' => 'customers1'
     ]);
 
 Route::get('customers',[
-    'uses' =>'CustomerContoroller@list',
+    'uses' =>'CustomerContoroller@index',
     'as' => 'customers'
 ]);
+
+Route::get('customers/create',[
+    'uses' =>'CustomerContoroller@create',
+    'as' => 'customers/create'
+]);
+
 

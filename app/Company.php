@@ -6,8 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Company extends Model
 {
-    public function customers()
+    //  protected $fillable = ['name','email','active','company_id'];
+      public function customers()
     {
-        return $this->hasMany(Customer::class);
+        // one to manyの記載をつける
+        return $this->hasMany('App\Customer');
     }
 }

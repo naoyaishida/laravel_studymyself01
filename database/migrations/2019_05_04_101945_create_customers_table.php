@@ -13,11 +13,13 @@ class CreateCustomersTable extends Migration
      */
     public function up()
     {
+        // スキーマーでテーブルを作る
         Schema::create('customers', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');
             $table->string('email');
             $table->integer('active');
+            $table->integer('company_id');
             $table->timestamps();
         });
     }
