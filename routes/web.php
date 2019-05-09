@@ -1,4 +1,5 @@
 <?php
+use App\Http\Controllers\CustomerContoroller;
 
 /*
 |--------------------------------------------------------------------------
@@ -88,7 +89,7 @@ Route::view('about','about');
 
 // asは引き受け元、usersはその先
 
-Route::get('customers1',[
+Route::post('customers1',[
     'uses' => 'CustomerContoroller@store',
     'as' => 'customers1'
     ]);
@@ -103,5 +104,9 @@ Route::get('customers/create',[
     'as' => 'customers/create'
 ]);
 
-ddd
+Route::get('customers2',[
+    'uses'=>'CustomerContoroller@show',
+    'as'=>'customers2'
+]);
 
+// Route::get('customers/{{$customer->id}}','CustomerContoroller@show');

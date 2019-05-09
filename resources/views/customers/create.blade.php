@@ -11,7 +11,8 @@
 
 <div class="row">
     <div class="col-12">
-        <form action="customers" method="post">
+        {{-- しょうもない書き方ミスしてた --}}
+    <form action="{{route('customers1')}}" method="post">
 
     <div class="form-group" pb-2 >
         <label for="name">Name</label>

@@ -50,5 +50,13 @@ class CustomerContoroller extends Controller
         return redirect('customers');
     }
 
+    public function show($customer)
+    {
+        $customer = Customer::find($customer);
+        return view('customers.show')
+
+
+    }
+
 
 }
