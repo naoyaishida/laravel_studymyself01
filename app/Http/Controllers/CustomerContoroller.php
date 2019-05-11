@@ -50,11 +50,12 @@ class CustomerContoroller extends Controller
         return redirect('customers');
     }
 
-    public function show($customer)
+    // 毎回（）の中に重ねる、カスタマー、カスタマー
+    public function show(Customer $customer)
     {
-        $customer = Customer::find($customer);
-        return view('customers.show')
+        // $customer = Customer::find($customer);
 
+        return view('customers.show')->with('customer',$customer);
 
     }
 

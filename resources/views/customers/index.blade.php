@@ -16,8 +16,9 @@
     <div class="col-2">
         {{$customer->id}}
     </div>
-<div class="col-4"> 
-    <a href="/customers/{{$customer->id}}"action="{{route('customers2')}}">{{$customer->name}}</a>
+<div class="col-4">
+    {{-- IDへ飛ばすやり方、アンカータグの中にはアクション入れない、ルートないで --}}
+    <a href="{{route('customers.show',['id'=>$customer->id])}}">{{$customer->name}}</a>
 </div>
 <div class="col-4">{{$customer->company->name}}</div>
 <div class="col-2">{{$customer->active}}</div>

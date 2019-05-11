@@ -104,9 +104,16 @@ Route::get('customers/create',[
     'as' => 'customers/create'
 ]);
 
-Route::get('customers2',[
+Route::get('customers/{customer}',[
     'uses'=>'CustomerContoroller@show',
-    'as'=>'customers2'
+    'as'=>'customers.show'
 ]);
 
 // Route::get('customers/{{$customer->id}}','CustomerContoroller@show');
+
+// Route::patch('customers1',[
+//     'uses' => 'CustomerContoroller@store',
+//     'as' => 'customers1'
+//     ]);
+
+
